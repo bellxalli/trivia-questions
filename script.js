@@ -1,5 +1,4 @@
 import express from 'express';
-import pug from 'pug';
 
 const app = express();
 
