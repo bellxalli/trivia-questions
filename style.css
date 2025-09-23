@@ -3,10 +3,17 @@ img{
 
 width: 380px;
 
-border:solid;
-border-color: rgb(0, 214, 0);
+border:solid rgb(0, 214, 0) 5px;
 border-radius: 20px;
 
+
+}
+
+hr{
+
+height:5px;
+background-color:white;
+border-radius: 20px;
 
 }
 
@@ -53,6 +60,9 @@ background-color: rgb(113, 222, 113);
 
 padding: 30px;
 margin: 10px;
+
+border:solid green 2px;
+border-radius: 20px;
 
 
 }
