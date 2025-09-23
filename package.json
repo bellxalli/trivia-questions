@@ -1,8 +1,22 @@
 {
+  "name": "trivia-questions",
+  "version": "1.0.0",
+  "description": "Trivia Questions, Xalli B. and Emily M.",
+  "main": "script.js",
+  "type": "module",
+  "engines": {
+    "node": ">= 14.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "scripts": {
+    "dev": "nodemon index.html"
+  },
   "dependencies": {
     "es6": "^0.0.7",
-    "express": "^5.1.0",
-    "nodemon": "^3.1.10",
-    "pug": "^3.0.3"
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
+
