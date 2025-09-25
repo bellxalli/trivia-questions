@@ -9,7 +9,7 @@
     "npm": ">= 6.0.0"
   },
   "scripts": {
-    "dev": "nodemon index.html"
+    "dev": "nodemon script.js"
   },
   "dependencies": {
     "es6": "^0.0.7",
