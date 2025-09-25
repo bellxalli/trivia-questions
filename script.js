@@ -11,27 +11,35 @@ window.onload = function()
         },
         {
             question: "What was the first implemented coding language?",
-            answerCorrect: "Plankalkül",
-            answer1: "Autocode",
-            answer2: "Fortran"
+            answers: [
+                { text: "Plankalkül", correct: true },
+                { text: "Autocode", correct: false },
+                { text: "Fortran", correct: false }
+            ]
         },
         {
             question: "What is the biggest bug right now?",
-            answer1: "My Coding",
-            answerCorrect: "Giant Weta",
-            answer2: "The Common Cold"
+            answers: [
+                { text: "Giant Weta", correct: true },
+                { text: "My coding", correct: false },
+                { text: "The Common Cold", correct: false }
+            ]
         },
         {
             question: "How many islands in the world?",
-            answerCorrect: "670,000",
-            answer1: "660,000",
-            answer1: "50,000"
+            answers: [
+                { text: "670,000", correct: true },
+                { text: "660,000", correct: false },
+                { text: "50,000", correct: false }
+            ]
         },
         {
             question: "When was the first video game created?",
-            answerCorrect: "1958",
-            answer1: "1972",
-            answer2: "1966"
+            answers: [
+                { text: "1958", correct: true },
+                { text: "1972", correct: false },
+                { text: "1996", correct: false }
+            ]
         }        
     ]
     
