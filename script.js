@@ -59,17 +59,32 @@ window.onload = function()
         question.innerText = newQuestion.question;
         questionArea.appendChild(question);
 
-        // const answerCorrect = document.createElement("button");
-        // answerCorrect.className = "correct";
-        // answerCorrect.innerHTML = questions[randomNum].answerCorrect
+        const shuffledAnswers = shuffle([newQuestion.answers]);
 
-        // const answer1 = document.createElement("button");
-        // answer1.className = "incorrect";
-        // answer1.innerHTML = questions[randomNum].answer1
+        shuffledAnswers.forEach(element => {
+            const button = document.createElement("button");
+            button.innerText = element.text;
+            button.className = "answer";
 
-        // const answer2 = document.createElement("button");
-        // answer2.className = "incorrect";
-        // answer2.innerHTML = questions[randomNum].answer2
+            button.onclick = () =>
+            {
+                if(element.correct === true)
+                {
+                    button.style.backgroundColor = "green";
+                    alert("Correct!!!");
+                }
+                else
+                {
+                    button.style.backgroundColor = "red";
+                    alert("Incorrect :(");
+                }
+            }
+
+            const allButtons = document.querySelectorAll(".answer");
+            allButtons.forEach(e => e.disabled = true);
+
+            questionArea.appendChild(btn);
+        });
 
         // questionArea.appendChild(answer1);
         // questionArea.appendChild(answer2);
@@ -78,6 +93,13 @@ window.onload = function()
         // check if answer is correct from onlcick
         // use another function?
     }
+
+    function shuffle(array) 
+    {
+        return array.sort(() => Math.random() - 0.5);
+    }
+
+
 
 
 
