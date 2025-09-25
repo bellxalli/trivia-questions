@@ -50,29 +50,30 @@ window.onload = function()
     {
         questionArea.innerHTML = ""; //clear area of prev question
 
-        let randomNum = Math.floor(Math.random() * (questions.length-1));
+        const randomNum = Math.floor(Math.random() * (questions.length-1));
         //use randomNum to select a question randomly from question array
             //could also add a shuffle function?
+        const newQuestion = questions[randomNum];
 
         const question = document.createElement("h2");
-        question.innerHTML = questions[randomNum].question
-
-        const answerCorrect = document.createElement("button");
-        answerCorrect.className = "correct";
-        answerCorrect.innerHTML = questions[randomNum].answerCorrect
-
-        const answer1 = document.createElement("button");
-        answer1.className = "incorrect";
-        answer1.innerHTML = questions[randomNum].answer1
-
-        const answer2 = document.createElement("button");
-        answer2.className = "incorrect";
-        answer2.innerHTML = questions[randomNum].answer2
-
+        question.innerText = newQuestion.question;
         questionArea.appendChild(question);
-        questionArea.appendChild(answer1);
-        questionArea.appendChild(answer2);
-        questionArea.appendChild(answerCorrect);
+
+        // const answerCorrect = document.createElement("button");
+        // answerCorrect.className = "correct";
+        // answerCorrect.innerHTML = questions[randomNum].answerCorrect
+
+        // const answer1 = document.createElement("button");
+        // answer1.className = "incorrect";
+        // answer1.innerHTML = questions[randomNum].answer1
+
+        // const answer2 = document.createElement("button");
+        // answer2.className = "incorrect";
+        // answer2.innerHTML = questions[randomNum].answer2
+
+        // questionArea.appendChild(answer1);
+        // questionArea.appendChild(answer2);
+        // questionArea.appendChild(answerCorrect);
 
         // check if answer is correct from onlcick
         // use another function?
