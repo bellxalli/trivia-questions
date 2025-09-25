@@ -3,9 +3,11 @@ window.onload = function()
     const questions = [
         {
             question: "What is the biggest sauropod?",
-            answerCorrect: "Argentinosaurus",
-            answer1: "Blue Whale",
-            answer2: "Gignanototsarus"
+            answers: [
+                { text: "Argentinosaurus", correct: true },
+                { text: "Blue Whale", correct: false },
+                { text: "Giganotosaurus", correct: false }
+            ]
         },
         {
             question: "What was the first implemented coding language?",
@@ -36,7 +38,7 @@ window.onload = function()
     const beginButton = document.getElementById("beginButton");
     beginButton.onclick = () =>
     {
-        let randomNum = Math.floor(Math.random() * (questions.length-1)) + 1;
+        let randomNum = Math.floor(Math.random() * (questions.length-1));
         //use randomNum to select a question randomly from question array
 
         const questionArea = document.querySelector("#questionArea");
