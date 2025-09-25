@@ -36,12 +36,16 @@ window.onload = function()
     ]
     
     const beginButton = document.getElementById("beginButton");
+    const questionArea = document.getElementById("questionArea");
+
     beginButton.onclick = () =>
     {
+        questionArea.innerHTML = ""; //clear area of prev question
+
         let randomNum = Math.floor(Math.random() * (questions.length-1));
         //use randomNum to select a question randomly from question array
+            //could also add a shuffle function?
 
-        const questionArea = document.querySelector("#questionArea");
         const question = document.createElement("h2");
         question.innerHTML = questions[randomNum].question
 
