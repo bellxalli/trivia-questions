@@ -59,7 +59,7 @@ window.onload = function()
         question.innerText = newQuestion.question;
         questionArea.appendChild(question);
 
-        const shuffledAnswers = shuffle([newQuestion.answers]);
+        const shuffledAnswers = shuffle([...newQuestion.answers]);
 
         shuffledAnswers.forEach(element => {
             const button = document.createElement("button");
@@ -78,33 +78,19 @@ window.onload = function()
                     button.style.backgroundColor = "red";
                     alert("Incorrect :(");
                 }
+                const allButtons = document.querySelectorAll(".answer");
+                allButtons.forEach(e => e.disabled = true);
+
+                questionArea.appendChild(button);
             }
 
-            const allButtons = document.querySelectorAll(".answer");
-            allButtons.forEach(e => e.disabled = true);
-
-            questionArea.appendChild(btn);
         });
-
-        // questionArea.appendChild(answer1);
-        // questionArea.appendChild(answer2);
-        // questionArea.appendChild(answerCorrect);
-
-        // check if answer is correct from onlcick
-        // use another function?
     }
 
     function shuffle(array) 
     {
         return array.sort(() => Math.random() - 0.5);
     }
-
-
-
-
-
-
-
-    
+   
 
 }
